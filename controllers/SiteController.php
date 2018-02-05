@@ -1,13 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: andrii
- * Date: 05.02.2018
- * Time: 20:07
- */
+namespace app\controllers;
 class SiteController extends \yii\web\Controller{
     public function actionIndex()
     {
-        return 'Our CRM';
+        $arr = ['1'=>2,2=>'123',3=>13,3];
+        $t = compact('arr');
+        var_dump($arr);
+        echo "<br>";
+        var_dump($t);
+        //return 'Our CRM';
     }
 }

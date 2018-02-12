@@ -9,7 +9,7 @@ use \yii\web\Controller;
 
 Class CustomerController extends Controller{
     public function actionIndex(){
-        $records = $this->findRecordsByQuery();
-        return $this->render('index',compact('records'));
+//        $records = $this->findRecordsByQuery();
+//        return $this->render('index',compact('records'));
     }
 }

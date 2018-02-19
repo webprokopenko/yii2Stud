@@ -1,7 +1,13 @@
 <?php
-return[
-    'class'=>'\yii\db\Connection',
-    'dsn'=>'mysql:host=127.0.0.1,dbname=crmapp2',
-    'username'=>'root',
-    'password'=>'root'
+/**
+ * Created by PhpStorm.
+ * User: Ivan
+ * Date: 4/4/16
+ * Time: 8:22 PM
+ */
+return [
+    'class'     =>  '\yii\db\Connection',
+    'dsn'       =>  'mysql:host=localhost;dbname=crmapp',
+    'username'  =>  'root',
+    'password'  =>  'root',
 ];

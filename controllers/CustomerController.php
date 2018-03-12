@@ -8,7 +8,8 @@
 use \yii\web\Controller;
 use \app\models\customer\CustomerRecord;
 use \app\models\customer\PhoneRecord;
-
+use yii\helpers\Html;
+use yii\sphinx\Query;
 
 Class CustomerController extends Controller{
     /**
@@ -17,6 +18,16 @@ Class CustomerController extends Controller{
     public function actionIndex(){
 //        $records = $this->findRecordsByQuery();
 //        return $this->render('index',compact('records'));
+    }
+    public function actionSearch(){
+        $word = Html::encode(Yii::$app->request->get('word'));
+        $query = new Query();
+        $rows = $query->from('blog')
+                    ->match($word)
+                    ->all();
+
+        return $this->render('search', ['rows'=>$rows]);
+
     }
     //Метод для сохранения модели клиента в БД
     private function store(Customer $customer){
